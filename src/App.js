@@ -1,5 +1,10 @@
 // import React from "react"
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Route,
+  Routes,
+} from "react-router-dom"
 // import { useState } from "react"
 import Header from "./components/Header"
 import FeedbackList from "./components/FeedbackList"
@@ -13,7 +18,7 @@ import { FeedbackProvider } from "./context/FeedbackContext"
 const App = () => {
   return (
     <FeedbackProvider>
-      <Router>
+      <HashRouter>
         <Header />
         <div className="container">
           <Routes>
@@ -33,7 +38,7 @@ const App = () => {
 
           <AboutIconLink />
         </div>
-      </Router>
+      </HashRouter>
     </FeedbackProvider>
   )
 }
